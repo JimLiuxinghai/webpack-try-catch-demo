@@ -10,5 +10,8 @@ export default class test{
 	methodB(){
 		console.log('this is methodB');
 	}
+}
 
+var a = () => {
+	console.log('tst....')
 }
