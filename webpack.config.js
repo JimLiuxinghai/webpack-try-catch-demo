@@ -12,7 +12,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.jsx$/,
-                loader: 'babel-loader!babel-try-catch-loader?rethrow=true&verbose&reporter=reportError&tempdir=.tryCatchResult',
+                loader: 'babel-try-catch-loader?rethrow=true&verbose&reporter=reportError&tempdir=.tryCatchResult!babel-loader',
                 exclude: /node_modules/
             }
         ],
@@ -39,5 +39,5 @@ module.exports = {
         chunkFilename: "[chunkhash].js"
     },
 
-    devtool: DEBUG ? 'inline-source-map' : false,
+    devtool: 'source-map',
 };
